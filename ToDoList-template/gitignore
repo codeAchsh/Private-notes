@@ -1,0 +1,26 @@
+# OSやエディタ関連
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# node_modules（もしJavaScriptのパッケージ管理使う場合）
+node_modules/
+
+# ビルドや生成物（もしビルドツールを使う場合）
+dist/
+build/
+
+# 一時ファイルやキャッシュ
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# 環境設定ファイル（もし環境ごとに違う設定ファイルがあれば）
+.env
+
+# その他ユーザー固有のファイル
+*.sublime-project
+*.sublime-workspace

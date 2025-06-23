@@ -1,0 +1,134 @@
+    :root {
+      --bg-color: papayawhip;
+      --text-color: #333;
+      --section-bg: #fff;
+    }
+
+    body.dark-mode {
+      --bg-color: #1a1a1a;
+      --text-color: #f0f0f0;
+      --section-bg: #2a2a2a;
+    }
+
+    body[data-template="musical"] {
+      --bg-color: lavenderblush;
+      --text-color: #4b0082;
+      --section-bg: #fff0f5;
+    }
+
+    body[data-template="concert"] {
+      --bg-color: mintcream;
+      --text-color: #006400;
+      --section-bg: #f0fff0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    section {
+      background: var(--section-bg);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: inherit;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      background: inherit;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .favorites label {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #555;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .todo-controls {
+      margin-top: 1rem;
+    }
+    .todo-controls button {
+      margin-right: 0.5rem;
+      padding: 0.3rem 0.7rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: #8b4513;
+      color: white;
+      cursor: pointer;
+    }
+
+    select {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      section {
+        padding: 1rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
+      .dark-toggle {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+    }

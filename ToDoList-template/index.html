@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO 改善 -->
+    <meta name="description" content="シンプルで使いやすい買い物リストと家事リストのTo Do Listアプリ。チェックボックスで完了管理、編集可能なタイトル付き。毎日のタスク管理に役立ちます。">
+    <meta name="keywords" content="To Do List, 買い物リスト, 家事リスト, タスク管理, チェックリスト, フロントエンド, JavaScript">
+    <meta name="author" content="codeAchsh">
+    <link rel="shortcut icon" href="assets/images/check.ico">
+
+  <title>My To Do List</title>
+  <link rel="stylesheet" href="assets/style.css"> 
+</head>
+<body>
+  <header>
+    <h1>To Do List</h1>
+  </header>
+
+  <main>
+    <section class="todo-list">
+      <div class="list-1">
+        <h2 contenteditable="true">🛒 買い物メモ（カスタマイズ可）</h2>
+        <div class="todo-add">
+            <input type="text" id="shopping-input" placeholder="リストを入力">
+            <button onclick="addShoppingItem()">追加</button>
+        </div>
+        <ul class="todo-section" id="shopping-list">
+            <li><label><input type="checkbox"> <span>牛乳</span></label></li>
+            <li><label><input type="checkbox"> <span>卵</span></label></li>
+            <li><label><input type="checkbox"> <span>にんじん</span></label></li>
+        </ul>
+        <!-- 買い物メモ用　削除ボタン -->
+        <button onclick="removeCheckedItems('shopping-list')">🗑️ 完了したリストを削除</button>
+      </div>
+      <div class="list-2">
+        <h2 contenteditable="true">🧹 家事リスト（カスタマイズ可）</h2>
+        <div class="todo-add">
+            <input type="text" id="housework-input" placeholder="リストを入力">
+            <button onclick="addHouseworkItem()">追加</button>
+        </div>
+        <ul class="todo-section" id="housework-list">
+            <li><label><input type="checkbox"> <span>洗濯</span></label></li>
+            <li><label><input type="checkbox"> <span>掃除機かける</span></label></li>
+            <li><label><input type="checkbox"> <span>夕食の準備</span></label></li>
+        </ul>
+        <!-- 家事リスト用　削除ボタン -->
+        <button onclick="removeCheckedItems('housework-list')">🗑️ 完了したリストを削除</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 code.achsh@gmail.com</p>
+  </footer>
+
+  <script src="js/javascript.js"></script> 
+</body>
+</html>

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Yusei+Magic&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    body {
+        background: #fdfdf8;
+        font-family: 'Noto Sans JP', sans-serif;
+        padding: 2rem;
+        color: #333;
+    }
+    .todo-list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2em;
+      gap: 5rem;
+    }
+    .todo-add{
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+    #shopping-input,
+    #housework-input{
+        flex: 1;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    button{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background: #f28b82;  /* ボタン背景色 */
+        color: #fff;  /* ボタン文字色 */
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .todo-list {
+        max-width: 500px;
+        margin: auto;
+        background: papayawhip;  /* 背景色 */
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2 {
+        position: relative;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #555;  /* h2文字色 */
+        font-family: "Yusei Magic", sans-serif;
+        display: block;
+        padding: 0 1rem;
+        z-index: 1;
+    }
+    h2[contenteditable="true"]:hover{
+        background-color: rgb(253, 204, 162);  /* カーソルを置くと変わる色*/
+        cursor: text;
+        outline: 1px dashed #999;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+    
+    h2::before,
+    h2::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20%;
+        height: 1px;
+        background: #555;
+        z-index: -1;
+    }
+    h2::before {
+        left: -15%;
+    }
+
+    h2::after {
+        right: -15%;
+    }
+    .todo-section {
+        list-style: none;
+        padding: 0;
+    }
+
+    .todo-section li {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        display: flex;
+    }
+
+    input[type="checkbox"]:checked + span {
+        text-decoration: line-through;
+        color: #aaa;
+    }
+
+    footer p{
+        text-align: center;
+        margin-top: 1rem;
+    
+}
+
+
+/* スマホ対応：画面幅600px以下の場合 */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem; /* 余白を少なめに */
+  }
+  .todo-list {
+    max-width: 100%;  /* 幅を画面いっぱいに */
+    padding: 1rem;    /* 内側の余白も調整 */
+    border-radius: 12px;
+  }
+  .todo-add {
+    flex-direction: column; /* 入力欄とボタンを縦並びに */
+    gap: 0.5rem;
+  }
+  #shopping-input {
+    font-size: 1rem;
+  }
+  button {
+    width: 100%; /* ボタンを横幅いっぱいに */
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+  .todo-section li {
+    font-size: 0.95rem;
+  }
+}
